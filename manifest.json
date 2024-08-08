@@ -1,16 +1,15 @@
 {
-    "name": "Extension name",
+    "name": "Site Alert",
     "version": "1.0.0",
-    "description": "red green yellow",
+    "description": "Icon changes colour based on risk of site",
     "manifest_version": 3, 
     "action":{
-        "default_title": "something",
-        "default_popup": "index.html",
+        "default_title": "Site Alert",
+        "default_popup": "popup.html",
         "default_icon": "default128.png"
     },
     "permissions": [
-        "tabs",
-        "activeTab"
+        "tabs"
     ],
     "background":{
         "service_worker": "background.js",
