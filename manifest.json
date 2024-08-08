@@ -1,0 +1,19 @@
+{
+    "name": "Extension name",
+    "version": "1.0.0",
+    "description": "red green yellow",
+    "manifest_version": 3, 
+    "action":{
+        "default_title": "something",
+        "default_popup": "index.html",
+        "default_icon": "default128.png"
+    },
+    "permissions": [
+        "tabs",
+        "activeTab"
+    ],
+    "background":{
+        "service_worker": "background.js",
+        "type": "module"
+    }
+}
