@@ -3,7 +3,11 @@ console.log('a');
 var currentURL = null;
 var isComplete;
 
+//example list of phishing domains
 var phishingDomains = ['example.com'];
+
+//example list of trusted domains
+var trustedDomains = ['www.google.com'];
 
 // check if loading complete
 let myPromise = new Promise(resolve => {
@@ -31,6 +35,14 @@ chrome.tabs.onUpdated.addListener(
                         }
                     })
                 }
+                else if (trustedDomains.includes(domain)) {
+                    console.log("Good!!");
+                    chrome.action.setIcon({
+                        path: {
+                            "128": "green128.png"
+                        }
+                    })
+                }
                 else {
                     chrome.action.setIcon({
                         path: {
@@ -42,10 +54,5 @@ chrome.tabs.onUpdated.addListener(
             catch(err){}
         }
     }
-        /*chrome.action.setIcon({
-            path : {
-                "128": "pathto128.png"
-            }
-        })*/
     
 )
