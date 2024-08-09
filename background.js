@@ -47,7 +47,8 @@ chrome.tabs.onUpdated.addListener(
                 else {
                     chrome.action.setIcon({
                         path: {
-                            "128": "default128.png"
+                            //"128": "default128.png"
+                            "128": "yellow128.png"
                         }
                     })
                 }
